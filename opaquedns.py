@@ -231,6 +231,7 @@ class DNSResolver(client.Resolver):
 
 
 if __name__ == '__main__':
+    # test for testing probably you should use bind to caching the results
     print "using 8.8.8.8 and 8.8.4.4 as our forwarders"
     db_dns_resolver = DNSResolver( [("8.8.8.8", 53), ("8.8.4.4", 53)] )
     f = server.DNSServerFactory(clients=[db_dns_resolver])
